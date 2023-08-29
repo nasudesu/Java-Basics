@@ -17,7 +17,4 @@ public class Customer {
         end_time = System.currentTimeMillis();
         return end_time;
     }
-    public int getId() {
-        return id;
-    }
 }
