@@ -20,6 +20,8 @@ public class Main2 {
             customerservise.removeFromqueue();
         }
 
+        System.out.println("Average serving time: " + customerservise.getAverage()/customers);
+
 
 
 
