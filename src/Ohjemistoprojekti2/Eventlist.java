@@ -7,7 +7,7 @@ public class Eventlist {
     LinkedList<Event> events = new LinkedList<>();
     public void setEvent() {
         events.add(new Event());
-        System.out.println("Added new event: "+events.getLast().Event_num+" Type: "+events.getLast().getEventType());
+        System.out.println("Added new event ID: "+events.getLast().Event_num+" Type: "+events.getLast().getEventType());
     }
     public void getEvents() {
         for (int i = 0; i < events.size(); i++) {
