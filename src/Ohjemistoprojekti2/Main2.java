@@ -10,19 +10,23 @@ public class Main2 {
 
         Scanner scanner = new Scanner(System.in);
         Eventlist eventlist = new Eventlist();
-        boolean empy = true;
+        boolean stopper = true;
 
         do {
-            System.out.println("Add Event Press: 1 Remove Event Press: 2 Stop program: 3");
-            int add = scanner.nextInt();
-            if (add == 1) {
-
-            } else if (add == 2) {
-
-            } else if (add == 3) {
-                empy = false;
+            System.out.println("Add Event: 1 Remove Event: 2 Show events: 3 Stop: 4");
+            int button = scanner.nextInt();
+            if (button == 1) {
+                eventlist.setEvent();
+            } else if (button == 2) {
+                eventlist.removeEvent();
+            } else if (button == 3) {
+                eventlist.getEvents();
+            } else if (button == 4) {
+                stopper = false;
             }
-        } while (empy);
+            System.out.println();
+            eventlist.checkIfempty();
+        } while (stopper);
     }
 
 }
