@@ -1,4 +1,4 @@
-package Chapter2.Exercises1;
+package Chapter2.Exercises;
 public class Car {
     private int tank_capacity;
     private int top_speed;
