@@ -1,4 +1,4 @@
-package Chapter2.Exercises;
+package Chapter2.Exercises1;
 
 public class TelevisionViewer {
     public static void main(String[] args) {

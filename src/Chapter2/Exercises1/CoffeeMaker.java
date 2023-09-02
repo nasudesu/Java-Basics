@@ -1,4 +1,4 @@
-package Chapter2.Exercises;
+package Chapter2.Exercises1;
 
 public class CoffeeMaker {
     String normalType = "normalType", espressoType = "espressoType";
