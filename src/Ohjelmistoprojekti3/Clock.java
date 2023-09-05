@@ -1,13 +1,11 @@
 package Ohjelmistoprojekti3;
-import eduni.distributions.*;
 
 public class Clock {
-
     private double time;
     private static Clock INSTANCE = null;
     private Clock() {}
-    public static Clock getInstance(){
-        if (INSTANCE == null){
+    public static Clock getInstance() {
+        if (INSTANCE == null) {
             INSTANCE = new Clock();
         }
         return INSTANCE;
@@ -17,5 +15,8 @@ public class Clock {
     }
     public double getTime() {
         return time;
+    }
+    public void advanceTime(double deltaTime) {
+        time += deltaTime;
     }
 }
