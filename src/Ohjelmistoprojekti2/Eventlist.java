@@ -1,6 +1,5 @@
-package Ohjemistoprojekti2;
+package Ohjelmistoprojekti2;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
 
 public class Eventlist {

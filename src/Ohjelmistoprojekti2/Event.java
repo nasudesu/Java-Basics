@@ -1,4 +1,4 @@
-package Ohjemistoprojekti2;
+package Ohjelmistoprojekti2;
 
 public class Event {
     private Eventtype eventType;

@@ -1,6 +1,4 @@
-package Ohjemistoprojekti2;
-
-import Ohjelmistoprojekti1.Customer;
+package Ohjelmistoprojekti2;
 
 import java.util.Scanner;
 
