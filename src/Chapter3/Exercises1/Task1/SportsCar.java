@@ -1,6 +1,6 @@
-package Chapter3.Exercises1;
+package Chapter3.Exercises1.Task1;
 
-public class SportsCar extends Car{
+public class SportsCar extends Car {
     private float speed, gasolineLevel;
     SportsCar(String typeName, int tank_capacity, int top_speed){
         super(typeName, tank_capacity, top_speed);
@@ -31,7 +31,7 @@ public class SportsCar extends Car{
         gasolineLevel = this.tank_capacity;
     }
     float getSpeed(){
-         return  super.getSpeed();
+         return  this.speed;
     }
     float getGasolineLevel() {
         return gasolineLevel;
