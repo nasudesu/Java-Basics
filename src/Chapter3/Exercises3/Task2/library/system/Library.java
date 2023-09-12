@@ -54,29 +54,30 @@ public class Library {
     public void displayLibraryBooks(){
         System.out.println("Library books: "+books.size());
     }
+    public void reserveBook(LibraryMember member, Book book) {
+        if (!book.isReserved()) {
+            book.setReserved(true);
+            member.addReservedBook(book);
+            System.out.println("Book reserved successfully.");
+        } else {
+            System.out.println("Book is already reserved.");
+        }
+    }
 
-    public static void main(String[] args) {
-        Library library = new Library();
-        Book book1 = new Book("Stars","John W",1234);
-        Book book2 = new Book("Moons","Walter W",4321);
-        LibraryMember libraryMember1 = new LibraryMember("Markus");
-        LibraryMember libraryMember2 = new LibraryMember("Jonne");
+    public void cancelReservation(LibraryMember member, Book book) {
+        if (book.isReserved() && member.hasReservedBook(book)) {
+            book.setReserved(false);
+            member.removeReservedBook(book);
+            System.out.println("Reservation canceled successfully.");
+        } else {
+            System.out.println("Book was not reserved by this member.");
+        }
+    }
 
-        library.addBook(book1);
-        library.addBook(book2);
-        library.addMember(libraryMember1);
-        library.addMember(libraryMember2);
-        library.displayLibraryBooks();
-
-        library.borrowBook(libraryMember1,book1);
-        library.borrowBook(libraryMember2,book2);
-        library.displayBorrowedBooks();
-        library.displayLibraryBooks();
-
-        library.returnBook(libraryMember1,book1);
-        library.returnBook(libraryMember2,book2);
-        library.displayLibraryBooks();
-
-
+    public void displayReservedBooks(LibraryMember member) {
+        System.out.println("Reserved books for " + member.getName() + ":");
+        for (Book book : member.getReservedBooks()) {
+            System.out.println(book.getTitle());
+        }
     }
 }
