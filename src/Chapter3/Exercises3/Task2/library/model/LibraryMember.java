@@ -34,15 +34,6 @@ public class LibraryMember {
             System.out.println("Title: "+book.getTitle());
         }
     }
-    /*
-    public void removeReservedBook(Book book){
-        for (Book reservedBook : reservedBooks){
-            if (reservedBook.equals(book)){
-                reservedBooks.remove(book);
-                break;
-            }
-        }
-    }*/
     public int getMemberID() {
         return this.memberID;
     }
