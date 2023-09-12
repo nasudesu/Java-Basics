@@ -29,6 +29,11 @@ public class LibraryMember {
     public void removeReservedBook(Book book){
         reservedBooks.remove(book);
     }
+    public void getReservedBooks(){
+        for (Book book : reservedBooks){
+            System.out.println("Title: "+book.getTitle());
+        }
+    }
     /*
     public void removeReservedBook(Book book){
         for (Book reservedBook : reservedBooks){
@@ -37,9 +42,7 @@ public class LibraryMember {
                 break;
             }
         }
-    }
-
-     */
+    }*/
     public int getMemberID() {
         return this.memberID;
     }

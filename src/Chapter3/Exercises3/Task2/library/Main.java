@@ -12,20 +12,22 @@ public class Main {
         LibraryMember libraryMember1 = new LibraryMember("Markus");
         LibraryMember libraryMember2 = new LibraryMember("Jonne");
 
-        library.addBook(book1);
-        library.addBook(book2);
-        library.addMember(libraryMember1);
-        library.addMember(libraryMember2);
-        library.displayLibraryBooks();
 
-        library.borrowBook(libraryMember1,book1);
-        library.borrowBook(libraryMember2,book2);
-        library.displayBorrowedBooks();
-        library.displayLibraryBooks();
+        //Task2
+        //library.addBook(book1);
+        //library.addMember(libraryMember1);
+        //library.displayLibraryBooks();
+        //library.borrowBook(libraryMember1,book1);
+        //library.displayBorrowedBooks();
+        //library.displayLibraryBooks();
+        //library.returnBook(libraryMember1,book1);
+        //library.displayLibraryBooks();
 
-        library.returnBook(libraryMember1,book1);
-        library.returnBook(libraryMember2,book2);
-        library.displayLibraryBooks();
+        //Task3
+        //library.reserveBook(libraryMember1,book1);
+        //library.displayReservedBooks(libraryMember1);
+        //library.cancelReservation(libraryMember1,book1);
+        //library.displayReservedBooks(libraryMember1);
 
 
     }

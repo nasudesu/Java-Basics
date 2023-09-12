@@ -76,8 +76,6 @@ public class Library {
 
     public void displayReservedBooks(LibraryMember member) {
         System.out.println("Reserved books for " + member.getName() + ":");
-        for (Book book : member.getReservedBooks()) {
-            System.out.println(book.getTitle());
-        }
+        member.getReservedBooks();
     }
 }
