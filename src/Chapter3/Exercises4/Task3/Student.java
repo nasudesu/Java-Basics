@@ -29,4 +29,9 @@ public class Student implements Serializable {
     public void setAge(int age) {
         this.age = age;
     }
+
+    @Override
+    public String toString() {
+        return "Id: "+this.id+" Name: "+this.name+" Age: "+this.age;
+    }
 }

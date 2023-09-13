@@ -3,37 +3,27 @@ package Chapter3.Exercises4.Task3;
 import java.io.Serializable;
 
 public class Enrollment implements Serializable {
-    String student;
-    String coure;
+    Student student;
+    Course course;
     String enrollmentDate;
 
-    public Enrollment(String student, String coure, String enrollmentDate) {
+    public Enrollment(Student student, Course course, String enrollmentDate) {
         this.student = student;
-        this.coure = coure;
+        this.course = course;
         this.enrollmentDate = enrollmentDate;
     }
 
-    public String getStudent() {
+    public Student getStudent() {
         return student;
     }
-
-    public void setStudent(String student) {
-        this.student = student;
+    public Course getCourse() {
+        return course;
     }
-
-    public String getCoure() {
-        return coure;
-    }
-
-    public void setCoure(String coure) {
-        this.coure = coure;
-    }
-
     public String getEnrollmentDate() {
         return enrollmentDate;
     }
-
-    public void setEnrollmentDate(String enrollmentDate) {
-        this.enrollmentDate = enrollmentDate;
+    @Override
+    public String toString() {
+        return "Student: "+this.student+" course: "+this.course+" Enrollment: "+this.enrollmentDate;
     }
 }

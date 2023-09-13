@@ -36,4 +36,9 @@ public class Course implements Serializable {
     public void setInstructor(String instructor) {
         this.instructor = instructor;
     }
+
+    @Override
+    public String toString() {
+        return "courseCode: "+this.courseCode+" coursename: "+this.courseName+" instructor: "+this.instructor;
+    }
 }
