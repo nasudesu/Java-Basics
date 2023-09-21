@@ -9,7 +9,7 @@ public class Theater{
 
     public synchronized boolean getTicket() {
         if (tickets > 0){
-            tickets--;
+            tickets = tickets - 1;
             return true;
         }else {
             return false;
