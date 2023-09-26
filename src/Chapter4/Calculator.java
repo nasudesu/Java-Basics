@@ -1,4 +1,4 @@
-package Ecercise2;
+package Chapter4;
 
 public class Calculator {
     private int value = 0;
