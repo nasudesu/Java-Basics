@@ -26,4 +26,9 @@ public class ElectricCar extends AbstractVehicle {
         System.out.println("ElectricCar info:\nType: "+this.type+"\nFuel: "+this.fuel+"\nColor: "+this.color);
     }
 
+    @Override
+    public void calculateFuelEfficiency(Double distanceKilometers, Double fuelLiters) {
+
+    }
+
 }

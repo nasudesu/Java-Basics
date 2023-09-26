@@ -22,4 +22,9 @@ public class ElectricMotorcycle extends AbstractVehicle {
     public void getInfo() {
         System.out.println("ElectricVehicle info:\nType: "+this.type+"\nFuel: "+this.fuel+"\nColor: "+this.color);
     }
+
+    @Override
+    public void calculateFuelEfficiency(Double distanceKilometers, Double fuelLiters) {
+
+    }
 }

@@ -20,4 +20,9 @@ public class Bus extends AbstractVehicle {
         System.out.println("Bus info:\nType: "+this.type+"\nFuel: "+this.fuel+"\nCapacity: "+this.capacity);
     }
 
+    @Override
+    public void calculateFuelEfficiency(Double distanceKilometers, Double fuelLiters) {
+
+    }
+
 }

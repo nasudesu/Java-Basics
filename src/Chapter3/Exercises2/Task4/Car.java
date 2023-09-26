@@ -19,4 +19,9 @@ public class Car extends AbstractVehicle {
     public void getInfo() {
         System.out.println("Car info:\nType: "+this.type+"\nFuel: "+this.fuel+"\nColor: "+this.color);
     }
+
+    @Override
+    public void calculateFuelEfficiency(Double distanceKilometers, Double fuelLiters) {
+
+    }
 }
