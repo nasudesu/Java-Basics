@@ -2,7 +2,7 @@ package Chapter6.model;
 
 import java.util.HashMap;
 
-public class Model {
+public class Dictionary {
 
     private HashMap<String, String> hashMap = new HashMap<>();
 
@@ -13,12 +13,8 @@ public class Model {
     public String searchForWord(String word){
         return hashMap.get(word);
     }
-
-    public static void main(String[] args) {
-        Model model = new Model();
-
-        model.addWord("Suomi", "Helsinki");
-        System.out.println(model.searchForWord("Suomi"));
+    public int getDictionarySize(){
+        return hashMap.size();
     }
 
 }
