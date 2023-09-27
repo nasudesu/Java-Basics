@@ -1,10 +1,8 @@
-package Chapter6.view;
+package Chapter6.Exrecise1.view;
 
-import Chapter6.controller.DictionaryController;
-import Chapter6.model.Dictionary;
+import Chapter6.Exrecise1.controller.DictionaryController;
 import javafx.application.Application;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.FlowPane;
 import javafx.stage.Stage;

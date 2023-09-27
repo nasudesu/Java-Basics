@@ -1,4 +1,4 @@
-package Chapter6.model;
+package Chapter6.Exrecise1.model;
 
 import java.util.HashMap;
 
