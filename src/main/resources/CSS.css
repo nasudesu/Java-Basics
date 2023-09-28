@@ -1,0 +1,17 @@
+.label {
+    -fx-font-family: "Berlin Sans FB";
+    -fx-font-size: 15px;
+}
+.button {
+    -fx-font-family: "Berlin Sans FB";
+    -fx-font-size: 15px;
+}
+.choice-box {
+    -fx-font-family: "Berlin Sans FB";
+    -fx-font-size: 15px;
+}
+.text-field {
+    -fx-font-family: "Berlin Sans FB";
+    -fx-font-size: 15px;
+}
+

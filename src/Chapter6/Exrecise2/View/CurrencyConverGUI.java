@@ -79,6 +79,7 @@ public class CurrencyConverGUI extends Application {
         gridPane.add(label3, 1, 2);
 
         Scene view = new Scene(gridPane, 500, 200);
+        view.getStylesheets().add("CSS.css");
         stage.setTitle("Currency convert");
         stage.setScene(view);
         stage.show();
