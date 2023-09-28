@@ -1,7 +1,6 @@
-package Chapter6.Exrecise2.View;
+package Chapter6.Exercise2.View;
 
-import Chapter6.Exrecise1.controller.DictionaryController;
-import Chapter6.Exrecise2.Controller.CCcontrol;
+import Chapter6.Exercise2.Controller.CCcontrol;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.geometry.HPos;
@@ -11,7 +10,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;

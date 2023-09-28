@@ -1,8 +1,8 @@
-package Chapter6.Exrecise1.controller;
+package Chapter6.Exercise1.controller;
 
 
-import Chapter6.Exrecise1.model.Dictionary;
-import Chapter6.Exrecise1.view.DictionaryGUI;
+import Chapter6.Exercise1.model.Dictionary;
+import Chapter6.Exercise1.view.DictionaryGUI;
 
 public class DictionaryController {
 

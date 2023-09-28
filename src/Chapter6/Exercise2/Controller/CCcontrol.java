@@ -1,9 +1,7 @@
-package Chapter6.Exrecise2.Controller;
+package Chapter6.Exercise2.Controller;
 
-import Chapter6.Exrecise2.Model.CurrencyConvert;
-import Chapter6.Exrecise2.View.CurrencyConverGUI;
-
-import java.util.Objects;
+import Chapter6.Exercise2.Model.CurrencyConvert;
+import Chapter6.Exercise2.View.CurrencyConverGUI;
 
 public class CCcontrol {
 

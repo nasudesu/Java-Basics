@@ -1,4 +1,4 @@
-package Chapter6.Exrecise2.Model;
+package Chapter6.Exercise2.Model;
 
 public class CurrencyConvert {
     private double amout1;

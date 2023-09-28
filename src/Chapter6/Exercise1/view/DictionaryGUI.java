@@ -1,6 +1,6 @@
-package Chapter6.Exrecise1.view;
+package Chapter6.Exercise1.view;
 
-import Chapter6.Exrecise1.controller.DictionaryController;
+import Chapter6.Exercise1.controller.DictionaryController;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.TextField;
