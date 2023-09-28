@@ -62,7 +62,7 @@ public class CurrencyConverGUI extends Application {
 
         Label label1 = new Label("Convert amount");
         Label label2 = new Label("Converted amount");
-        Label label3 = new Label("Chose currency from\n right from what u\n want to convert\n and from left\n to what u want\n to convert to \nenter values\nthen press convert");
+        Label label3 = new Label("Chose currency from right from what u want to convert and from\n left to what u want to convert to enter values then press convert");
 
 
         gridPane.add(label1, 0, 0);
@@ -76,7 +76,7 @@ public class CurrencyConverGUI extends Application {
         gridPane.add(convertedAmount, 2, 1);
 
         GridPane.setHalignment(label3, HPos.CENTER);
-        gridPane.add(label3, 1, 2);
+        gridPane.add(label3, 0, 2, 3, 1);
 
         Scene view = new Scene(gridPane, 500, 200);
         view.getStylesheets().add("CSS.css");
