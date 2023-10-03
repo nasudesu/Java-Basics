@@ -1,6 +1,6 @@
-package Chapter7.Exercises2.View;
+package Chapter7.Exercises2.entity;
 
-import Chapter7.Exercises2.Controller.CCcontrol;
+import Chapter7.Exercises2.application.CCcontrol;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.geometry.HPos;
@@ -32,8 +32,8 @@ public class CurrencyConverGUI extends Application {
         convert.setOnAction(event -> {
             try {
                 double value = Double.parseDouble(amountToConvert.getText());
-                cCcontrol.setAmount1(value);
-                convertedAmount.setText(String.valueOf(cCcontrol.convertValue(value, cCcontrol.getCurrencyType1(), cCcontrol.getCurrencyType2())));
+                cCcontrol.setValue(value);
+                convertedAmount.setText(String.valueOf(cCcontrol.convertValue()));
             } catch (Exception e) {
                 amountToConvert.setText("Give a number");
                 System.out.println("Give a number");
@@ -41,17 +41,17 @@ public class CurrencyConverGUI extends Application {
         });
 
         ChoiceBox<String> choiceBox1 = new ChoiceBox<>();
-        choiceBox1.setItems(FXCollections.observableArrayList("EUR", "USD", "GBP"));
+        choiceBox1.setItems(FXCollections.observableArrayList("EUR", "USD", "GBP", "JPY", "CNY", "CAD", "CHF", "AUD"));
         choiceBox1.setOnAction(event -> {
             String selectedOption = choiceBox1.getValue();
-            cCcontrol.setCurrencyType1(selectedOption);
+            cCcontrol.setType1(selectedOption);
         });
 
         ChoiceBox<String> choiceBox2 = new ChoiceBox<>();
-        choiceBox2.setItems(FXCollections.observableArrayList("EUR", "USD", "GBP"));
+        choiceBox2.setItems(FXCollections.observableArrayList("EUR", "USD", "GBP", "JPY", "CNY", "CAD", "CHF", "AUD"));
         choiceBox2.setOnAction(event -> {
             String selectedOption = choiceBox2.getValue();
-            cCcontrol.setCurrencyType2(selectedOption);
+            cCcontrol.setType2(selectedOption);
         });
 
         HBox hBox = new HBox();

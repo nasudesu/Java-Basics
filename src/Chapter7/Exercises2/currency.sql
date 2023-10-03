@@ -4,9 +4,10 @@ USE currency;
 
 CREATE TABLE IF NOT EXISTS tables
 (
+    id INT NOT NULL AUTO_INCREMENT,
     currency VARCHAR(3)     NOT NULL,
     rate     DECIMAL(10, 4) NOT NULL,
-    PRIMARY KEY (currency)
+    PRIMARY KEY (id)
 );
 
 INSERT INTO tables (currency, rate)
