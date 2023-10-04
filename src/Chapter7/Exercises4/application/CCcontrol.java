@@ -1,6 +1,6 @@
 package Chapter7.Exercises4.application;
 
-import Chapter7.Exercises4.dao.CurrencyConvertDao;
+import Chapter7.Exercises4.datasource.MariaDbJpaConnection;
 import Chapter7.Exercises4.entity.CurrencyConverGUI;
 import Chapter7.Exercises4.entity.CurrencyConvert;
 
@@ -9,14 +9,10 @@ public class CCcontrol {
     CurrencyConvert currencyConvert;
     CurrencyConverGUI currencyConverGUI;
 
-    CurrencyConvertDao currencyConvertDao;
-
     public CCcontrol(CurrencyConverGUI currencyConverGUI) {
         this.currencyConverGUI = currencyConverGUI;
         this.currencyConvert = new CurrencyConvert("","");
-        this.currencyConvertDao = new CurrencyConvertDao(this);
     }
-
 
     public double convertValue(){
         return currencyConvert.convert();

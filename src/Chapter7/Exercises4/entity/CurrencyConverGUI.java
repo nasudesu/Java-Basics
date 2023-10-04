@@ -1,6 +1,7 @@
 package Chapter7.Exercises4.entity;
 
 import Chapter7.Exercises4.application.CCcontrol;
+import Chapter7.Exercises4.dao.CurrencyDao;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.geometry.HPos;
@@ -16,6 +17,7 @@ import javafx.stage.Stage;
 
 public class CurrencyConverGUI extends Application {
     CCcontrol cCcontrol;
+    CurrencyDao currencyDao;
 
     public void init() {
         cCcontrol = new CCcontrol(this);
