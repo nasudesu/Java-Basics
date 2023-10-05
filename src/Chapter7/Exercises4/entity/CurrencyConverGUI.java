@@ -17,13 +17,13 @@ import javafx.stage.Stage;
 
 public class CurrencyConverGUI extends Application {
     CCcontrol cCcontrol;
-    CurrencyDao currencyDao;
 
     public void init() {
         cCcontrol = new CCcontrol(this);
     }
 
     public void start(Stage stage) {
+
         GridPane gridPane = new GridPane();
         gridPane.setAlignment(Pos.CENTER);
 

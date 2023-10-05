@@ -8,10 +8,21 @@ public class CurrencyApp {
 
         CurrencyDao currencyDao = new CurrencyDao();
 
-        currencyDao.persist(new Currency("EUR", 0.95));
-        currencyDao.persist(new Currency("USD", 1));
+        Currency currency = currencyDao.find("USD");
 
-        Currency cur = currencyDao.find(1);
-        System.out.println(cur.getCurrency() + " " + cur.getRate());
+        currencyDao.update(new Currency("LOL", 23));
+
+        Currency currency1 = currencyDao.find("LOL");
+
+        System.out.println(currency1.getCurrency() + " " + currency1.getRate());
+
+        System.out.println(currency.getCurrency() + " " + currency.getRate());
+
+        currencyDao.delete(currency1);
+
+
+
+
+
     }
 }

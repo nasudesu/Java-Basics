@@ -1,6 +1,6 @@
 package Chapter7.Exercises4.application;
 
-import Chapter7.Exercises4.datasource.MariaDbJpaConnection;
+import Chapter7.Exercises4.dao.CurrencyDao;
 import Chapter7.Exercises4.entity.CurrencyConverGUI;
 import Chapter7.Exercises4.entity.CurrencyConvert;
 
@@ -8,18 +8,21 @@ public class CCcontrol {
 
     CurrencyConvert currencyConvert;
     CurrencyConverGUI currencyConverGUI;
-
+    CurrencyDao currencyDao;
     public CCcontrol(CurrencyConverGUI currencyConverGUI) {
         this.currencyConverGUI = currencyConverGUI;
         this.currencyConvert = new CurrencyConvert("","");
+        this.currencyDao = new CurrencyDao();
     }
 
     public double convertValue(){
         return currencyConvert.convert();
     }
 
-    public void addCurrency(String currencyType, double value) {
-        currencyConvert.addCurrency(currencyType, value);
+    public void addCurrency() {
+        for (int i = 0; i < currencyDao.getAll().size(); i++) {
+            currencyConvert.addCurrency(currencyDao.getAll().get(i).getCurrency(), currencyDao.getAll().get(i).getRate());
+        }
     }
 
     public void setType1(String type1) {

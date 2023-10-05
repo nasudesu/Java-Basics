@@ -3,12 +3,10 @@ package Chapter7.Exercises4.entity;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "tables")
+@Table(name = "CurrencyConvert")
 public class Currency {
+
     @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
-    private int id;
-    @Column(name="currency")
     private String currency;
     @Column(name="rate")
     private double rate;
@@ -18,14 +16,6 @@ public class Currency {
         this.rate = rate;
     }
     public Currency() {
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getCurrency() {

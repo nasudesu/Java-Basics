@@ -4,10 +4,9 @@ USE currency;
 
 CREATE TABLE IF NOT EXISTS CurrencyConvert
 (
-    id INT NOT NULL AUTO_INCREMENT,
     currency VARCHAR(3)     NOT NULL,
     rate     DECIMAL(10, 4) NOT NULL,
-    PRIMARY KEY (id)
+    PRIMARY KEY (currency)
 );
 
 INSERT INTO CurrencyConvert (currency, rate)
