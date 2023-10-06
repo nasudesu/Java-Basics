@@ -22,9 +22,3 @@ VALUES ('USD', 1.00),
 DROP USER IF EXISTS 'appuser'@'localhost';
 CREATE USER 'appuser'@'localhost' IDENTIFIED BY 'password';
 GRANT SELECT, INSERT, UPDATE, DELETE ON CURRENCY.* TO 'appuser'@'localhost';
-
-
-
-
-
-

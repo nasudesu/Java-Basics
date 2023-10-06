@@ -5,6 +5,8 @@ import Chapter7.Exercises4.datasource.MariaDbJpaConnection;
 import Chapter7.Exercises4.entity.*;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.TypedQuery;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 import java.util.List;
 
@@ -43,5 +45,16 @@ public class CurrencyDao {
         TypedQuery<Currency> query = em.createQuery("SELECT c FROM Currency c", Currency.class);
         List<Currency> currencies = query.getResultList();
         return currencies;
+    }
+
+    public ObservableList<String> getAllCurrency() {
+        EntityManager em = MariaDbJpaConnection.getInstance();
+        TypedQuery<Currency> query = em.createQuery("SELECT c FROM Currency c", Currency.class);
+        List<Currency> currencies = query.getResultList();
+        ObservableList<String> items = FXCollections.observableArrayList();
+        for (Currency currency : currencies) {
+            items.add(currency.getCurrency());
+        }
+        return items;
     }
 }

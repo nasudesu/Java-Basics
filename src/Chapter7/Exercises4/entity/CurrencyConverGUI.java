@@ -23,11 +23,13 @@ public class CurrencyConverGUI extends Application {
     }
 
     public void start(Stage stage) {
-
+        cCcontrol.addCurrency();
+        CurrencyDao currencyDao = new CurrencyDao();
         GridPane gridPane = new GridPane();
         gridPane.setAlignment(Pos.CENTER);
 
         Button convert = new Button("Convert");
+        Button addCurrency = new Button("Add currency");
         TextField amountToConvert = new TextField("");
         TextField convertedAmount = new TextField("");
 
@@ -43,17 +45,53 @@ public class CurrencyConverGUI extends Application {
         });
 
         ChoiceBox<String> choiceBox1 = new ChoiceBox<>();
-        choiceBox1.setItems(FXCollections.observableArrayList("EUR", "USD", "GBP", "JPY", "CNY", "CAD", "CHF", "AUD"));
+        choiceBox1.setItems(currencyDao.getAllCurrency());
+        //choiceBox1.setItems(FXCollections.observableArrayList("EUR", "USD", "GBP", "JPY", "CNY", "CAD", "CHF", "AUD"));
         choiceBox1.setOnAction(event -> {
             String selectedOption = choiceBox1.getValue();
             cCcontrol.setType1(selectedOption);
         });
 
         ChoiceBox<String> choiceBox2 = new ChoiceBox<>();
-        choiceBox2.setItems(FXCollections.observableArrayList("EUR", "USD", "GBP", "JPY", "CNY", "CAD", "CHF", "AUD"));
+        choiceBox2.setItems(currencyDao.getAllCurrency());
+        //choiceBox2.setItems(FXCollections.observableArrayList("EUR", "USD", "GBP", "JPY", "CNY", "CAD", "CHF", "AUD"));
         choiceBox2.setOnAction(event -> {
             String selectedOption = choiceBox2.getValue();
             cCcontrol.setType2(selectedOption);
+        });
+
+        addCurrency.setOnAction(event -> {
+            Stage newStage = new Stage();
+            GridPane newGridPane = new GridPane();
+            newGridPane.setAlignment(Pos.CENTER);
+            TextField currency = new TextField("");
+            currency.setPromptText("Currency");
+            TextField rate = new TextField("");
+            rate.setPromptText("Rate");
+            Button add = new Button("Add");
+            newGridPane.add(currency, 0, 0);
+            newGridPane.add(rate, 0, 1);
+            newGridPane.add(add, 0, 2);
+            add.setOnAction(event1 -> {
+                try {
+                    String currency1 = currency.getText();
+                    double rate1 = Double.parseDouble(rate.getText());
+                    currencyDao.update(new Currency(currency1, rate1));
+                    cCcontrol.addCurrency();
+                    choiceBox1.setItems(currencyDao.getAllCurrency());
+                    choiceBox2.setItems(currencyDao.getAllCurrency());
+                    newStage.close();
+                } catch (Exception e) {
+                    currency.setText("Give a currency");
+                    rate.setText("Give a number");
+                    System.out.println("Give a currency and a number");
+                }
+            });
+            Scene view = new Scene(newGridPane, 250, 100);
+            view.getStylesheets().add("CSS.css");
+            newStage.setTitle("Add currency");
+            newStage.setScene(view);
+            newStage.show();
         });
 
         HBox hBox = new HBox();
@@ -77,6 +115,8 @@ public class CurrencyConverGUI extends Application {
 
         GridPane.setHalignment(label3, HPos.CENTER);
         gridPane.add(label3, 0, 2, 3, 1);
+
+        gridPane.add(addCurrency, 1, 3);
 
         Scene view = new Scene(gridPane, 500, 200);
         view.getStylesheets().add("CSS.css");
