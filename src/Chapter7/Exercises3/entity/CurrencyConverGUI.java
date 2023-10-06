@@ -1,9 +1,8 @@
-package Chapter7.Exercises4.entity;
+package Chapter7.Exercises3.entity;
 
-import Chapter7.Exercises4.application.CCcontrol;
-import Chapter7.Exercises4.dao.CurrencyDao;
+import Chapter7.Exercises3.application.CCcontrol;
+import Chapter7.Exercises3.dao.CurrencyDao;
 import javafx.application.Application;
-import javafx.collections.FXCollections;
 import javafx.geometry.HPos;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;

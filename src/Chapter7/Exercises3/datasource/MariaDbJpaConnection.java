@@ -1,4 +1,4 @@
-package Chapter7.Exercises4.datasource;
+package Chapter7.Exercises3.datasource;
 
 import jakarta.persistence.*;
 
