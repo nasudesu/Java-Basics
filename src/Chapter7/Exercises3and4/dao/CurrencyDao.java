@@ -1,8 +1,8 @@
-package Chapter7.Exercises3.dao;
+package Chapter7.Exercises3and4.dao;
 
 
-import Chapter7.Exercises3.datasource.MariaDbJpaConnection;
-import Chapter7.Exercises3.entity.*;
+import Chapter7.Exercises3and4.datasource.MariaDbJpaConnection;
+import Chapter7.Exercises3and4.entity.*;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.TypedQuery;
 import javafx.collections.FXCollections;

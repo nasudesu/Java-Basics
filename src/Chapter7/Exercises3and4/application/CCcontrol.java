@@ -1,8 +1,8 @@
-package Chapter7.Exercises3.application;
+package Chapter7.Exercises3and4.application;
 
-import Chapter7.Exercises3.dao.CurrencyDao;
-import Chapter7.Exercises3.entity.CurrencyConverGUI;
-import Chapter7.Exercises3.entity.CurrencyConvert;
+import Chapter7.Exercises3and4.dao.CurrencyDao;
+import Chapter7.Exercises3and4.entity.CurrencyConverGUI;
+import Chapter7.Exercises3and4.entity.CurrencyConvert;
 
 public class CCcontrol {
 

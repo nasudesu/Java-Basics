@@ -1,7 +1,8 @@
-package Chapter7.Exercises3.entity;
+package Chapter7.Exercises3and4.entity;
 
-import Chapter7.Exercises3.application.CCcontrol;
-import Chapter7.Exercises3.dao.CurrencyDao;
+import Chapter7.Exercises3and4.application.CCcontrol;
+import Chapter7.Exercises3and4.dao.CurrencyDao;
+import Chapter7.Exercises3and4.dao.TransactionDao;
 import javafx.application.Application;
 import javafx.geometry.HPos;
 import javafx.geometry.Pos;
@@ -16,6 +17,7 @@ import javafx.stage.Stage;
 
 public class CurrencyConverGUI extends Application {
     CCcontrol cCcontrol;
+    int id = 0;
 
     public void init() {
         cCcontrol = new CCcontrol(this);
@@ -24,6 +26,7 @@ public class CurrencyConverGUI extends Application {
     public void start(Stage stage) {
         cCcontrol.addCurrency();
         CurrencyDao currencyDao = new CurrencyDao();
+        TransactionDao transactionDao = new TransactionDao();
         GridPane gridPane = new GridPane();
         gridPane.setAlignment(Pos.CENTER);
 
@@ -36,7 +39,10 @@ public class CurrencyConverGUI extends Application {
             try {
                 double value = Double.parseDouble(amountToConvert.getText());
                 cCcontrol.setValue(value);
-                convertedAmount.setText(String.valueOf(cCcontrol.convertValue()));
+                double convertedValue = cCcontrol.convertValue();
+                convertedAmount.setText(String.valueOf(convertedValue));
+                Transaction transaction = new Transaction(id++, value);
+                transactionDao.persist(transaction);
             } catch (Exception e) {
                 amountToConvert.setText("Give a number");
                 System.out.println("Give a number");
@@ -45,7 +51,6 @@ public class CurrencyConverGUI extends Application {
 
         ChoiceBox<String> choiceBox1 = new ChoiceBox<>();
         choiceBox1.setItems(currencyDao.getAllCurrency());
-        //choiceBox1.setItems(FXCollections.observableArrayList("EUR", "USD", "GBP", "JPY", "CNY", "CAD", "CHF", "AUD"));
         choiceBox1.setOnAction(event -> {
             String selectedOption = choiceBox1.getValue();
             cCcontrol.setType1(selectedOption);
@@ -53,7 +58,6 @@ public class CurrencyConverGUI extends Application {
 
         ChoiceBox<String> choiceBox2 = new ChoiceBox<>();
         choiceBox2.setItems(currencyDao.getAllCurrency());
-        //choiceBox2.setItems(FXCollections.observableArrayList("EUR", "USD", "GBP", "JPY", "CNY", "CAD", "CHF", "AUD"));
         choiceBox2.setOnAction(event -> {
             String selectedOption = choiceBox2.getValue();
             cCcontrol.setType2(selectedOption);
