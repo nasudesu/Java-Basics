@@ -8,10 +8,18 @@ public class Arraylistclass {
     Arraylistclass(){
         this.list = new ArrayList<>();
     }
-    public void addItem(String item){
+    public synchronized void addItem(String item){
         list.add(item);
     }
     public int getListSize(){
         return list.size();
+    }
+    public synchronized void removeItem(String item) {
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i).equalsIgnoreCase(item)){
+                list.remove(i);
+                break;
+            }
+        }
     }
 }
